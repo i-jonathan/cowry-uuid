@@ -12,11 +12,12 @@
 - database_pass
 
 ## Start
-To run application, install all required packaged
+To run application, install all required packages
 
 	$ pip install -r requirements.txt
 
 Create postgres database with name in $database_name
+
 Run application with
 
 	$ unicorn main:app --reload
