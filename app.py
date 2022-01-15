@@ -7,7 +7,7 @@ from sqlalchemy_utils import database_exists, create_database
 
 def start():
     # Check if needed environmental variables exists
-    necessary_env = {"database_name", "database_user", "database_pass"}
+    necessary_env = {"POSTGRES_DB", "POSTGRES_USER", "POSTGRES_PASSWORD"}
     diff = necessary_env.difference(os.environ)
     if diff:
         raise EnvironmentError(f'Please create the following environmental variables: \n{diff}')
@@ -26,9 +26,9 @@ def connect_database(table: str, user: str, password: str):
 start()
 
 # Fetch environmental variables
-table_name = os.getenv("database_name", "cowry")
-db_user = os.getenv("database_user", "postgres")
-db_pass = os.getenv("database_pass", "postgres")
+table_name = os.getenv("POSTGRES_DB")
+db_user = os.getenv("POSTGRES_USER")
+db_pass = os.getenv("POSTGRES_PASSWORD")
     
 db_engine = connect_database(table_name, db_user, db_pass)
 connection = db_engine.connect()
