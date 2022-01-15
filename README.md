@@ -8,9 +8,9 @@
 
 ## Environmental Variables Required
 ###### Create .env file and add these variables in
-- database_user
-- database_name
-- database_pass
+- POSTGRES_DB
+- POSTGRES_USER
+- POSTGRES_PASSWORD
 
 
 ## Start
