@@ -13,7 +13,7 @@ def start():
         raise EnvironmentError(f'Please create the following environmental variables: \n{diff}')
 
 def connect_database(table: str, user: str, password: str):
-    url = f'postgresql+psycopg2://{user}:{password}@localhost:5432/{table}'
+    url = f'postgresql+psycopg2://{user}:{password}@sql:5432/{table}'
     # Set echo to true to enable verbose mode. Set to false to disable
     engine = create_engine(url, echo=True)
 
