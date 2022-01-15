@@ -19,4 +19,4 @@ To run application,
 	$ docker-compose up --build -d
 
 
-Visit 127.0.0.1:8000
+Visit 127.0.0.1:8080
